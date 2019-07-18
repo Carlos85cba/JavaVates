@@ -18,6 +18,7 @@ public class Main {
         System.out.println("Ingrese el número del mes a imprimir");
         nro = myScan.nextInt();
         imprimirCase(nro);
+     
 
     }
 
