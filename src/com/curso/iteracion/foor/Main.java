@@ -7,27 +7,39 @@ public class Main {
         Scanner myScan = new Scanner(System.in);
         System.out.println("Ingrese numero para que se listen todos los numeros");
         int cap = myScan.nextInt();
-        for (int i=1; i<=cap; i++) {
-            System.out.println(i);
-        }
+        allValues(cap);
 
         System.out.println("Ingrese numero min y max para listar valores");
         int low = myScan.nextInt();
         int max = myScan.nextInt();
-
-        for (int i=low; i<=max; i++) {
-            System.out.println(i);
-        }
+        minMaxValues(low, max);
 
         System.out.println("Ingrese numero min y max para listar valores pares");
         int lowpar = myScan.nextInt();
         int maxpar = myScan.nextInt();
+        evenValues(lowpar, maxpar);
 
-        for (int i=lowpar; i<=maxpar; i++) {
-            if(i%2==0) {
+
+    }
+
+    private static void allValues(int cap) {
+        for (int i = 1; i <= cap; i++) {
+            System.out.println(i);
+        }
+    }
+
+    private static void minMaxValues(int low, int max) {
+        for (int i = low; i <= max; i++) {
+            System.out.println(i);
+        }
+    }
+
+    private static void evenValues(int lowpar, int maxpar) {
+        for (int i = lowpar; i <= maxpar; i++) {
+            if (i % 2 == 0) {
                 System.out.println(i);
             }
         }
-
     }
+
 }
