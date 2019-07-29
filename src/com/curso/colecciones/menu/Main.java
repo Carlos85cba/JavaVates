@@ -1,9 +1,6 @@
 package com.curso.colecciones.menu;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +8,8 @@ public class Main {
         int opcionMenu;
         String ar;
         ArrayList<String> a = new ArrayList<String>();
-        ListIterator<String> li = a.listIterator();
+
+
         {
         }
         do {
@@ -25,12 +23,16 @@ public class Main {
                     ar = myScan.next();
 
                     do { a.add(ar);
-                        ar = myScan.next();}
+                        ar = myScan.next();
+
+                    }
 
                     while (!ar.equals("salir"));
-                    Collections.sort(a);
-                    while ( li.hasNext())
-                    System.out.println(li.next());
+
+                   Collections.sort(a);
+                    Iterator li= a.iterator();
+                    while ( li.hasNext()){
+                   System.out.println(li.next());}
 
                     break;
                 }
