@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner myScan = new Scanner(System.in);
         int opcionMenu;
-        String ar;
-        ArrayList<String> a = new ArrayList<String>();
+        String sc;
+
 
 
         {
@@ -20,30 +20,52 @@ public class Main {
             opcionMenu = myScan.nextInt();
             switch (opcionMenu) {
                 case 1: {
-                    ar = myScan.next();
-
-                    do { a.add(ar);
-                        ar = myScan.next();
-
+                    ArrayList<String> a1 = new ArrayList<>();
+                    sc = myScan.next();
+                    do {
+                        a1.add(sc);
+                        sc = myScan.next();
                     }
+                    while (!sc.equals("salir"));
 
-                    while (!ar.equals("salir"));
-
-                   Collections.sort(a);
-                    Iterator li= a.iterator();
-                    while ( li.hasNext()){
-                   System.out.println(li.next());}
-
+                    Collections.sort(a1);
+                    Iterator li = a1.iterator();
+                    while (li.hasNext()) {
+                        System.out.println(li.next());
+                    }
                     break;
                 }
                 case 2: {
+                    ArrayList<String> a2 = new ArrayList<String>();
+                    sc = myScan.next();
+                    do {
+                        a2.add(sc);
+                        sc = myScan.next();
+                    }
+                    while (!sc.equals("salir"));
 
+                    Collections.reverse(a2);
+                    Iterator li = a2.iterator();
+                    while (li.hasNext()) {
+                        System.out.println(li.next());
+                    }
                     break;
                 }
 
                 case 3: {
+                    HashSet<String> a3 = new HashSet<String>();
+                    sc = myScan.next();
+                    do {
+                        a3.add(sc);
+                        sc = myScan.next();
+                    }
+                    while (!sc.equals("salir"));
 
 
+                    Iterator li = a3.iterator();
+                    while (li.hasNext()) {
+                        System.out.println(li.next());
+                    }
                     break;
                 }
 
