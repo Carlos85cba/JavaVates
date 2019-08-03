@@ -1,8 +1,6 @@
 package com.curso.herencia.pagoTarjeta;
 
-import java.util.Date;
 import java.time.LocalDateTime;
-
 
 public class IvrClient extends ClienteAccion{
 
