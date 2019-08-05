@@ -1,6 +1,10 @@
 package com.curso.proyecto.finall;
 
+import com.curso.colecciones.Array.Persona;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Api {
 
@@ -47,11 +51,13 @@ public class Api {
 
     public ArrayList getCellularInfo(String cel) {
         ArrayList<Cellular> apiMatch = new ArrayList<>();
+
         try {
         for (Cellular cel2 : cellular) {
             if (cel2.getCellularNumber().equals(cel)){
                 System.out.println("Devuelve Api");
                 apiMatch.add(cel2);}
+
         }
 
         if (apiMatch.isEmpty()) {
@@ -63,4 +69,18 @@ public class Api {
         return apiMatch;
     }
 
-}
+
+    public Cellular getCellularInfo2(String cel) throws MyExcepcion {
+        ListIterator<Cellular> lis = cellular.listIterator();
+
+            while (lis.hasNext()) {
+                Cellular cel2 = lis.next();
+                if (cel2.getCellularNumber().equals(cel))
+                    return cel2;
+            }
+            throw new MyExcepcion();
+
+
+        }
+
+    }

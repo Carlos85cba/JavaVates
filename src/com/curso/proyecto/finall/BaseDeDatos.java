@@ -1,6 +1,7 @@
 package com.curso.proyecto.finall;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class BaseDeDatos {
 
@@ -55,6 +56,20 @@ public class BaseDeDatos {
         System.out.println(ex.excErrorPersonalizado());}
 
         return dbMatch;
+    }
+
+
+    public Cellular getCellularInfo2(String cel) throws MyExcepcion {
+        ListIterator<Cellular> lis = cellular2.listIterator();
+
+        while (lis.hasNext()) {
+            Cellular cel3 = lis.next();
+            if (cel3.getCellularNumber().equals(cel))
+                return cel3;
+        }
+        throw new MyExcepcion();
+
+
     }
 
 }

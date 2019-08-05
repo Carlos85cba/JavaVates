@@ -6,6 +6,8 @@ public class Cellular {
     private  Plan planId;
     private ArrayList<Package> packages;
 
+    public Cellular(){}
+
     public Cellular(String cellularNumber, Plan planId, ArrayList<Package> packages) {
         this.cellularNumber = cellularNumber;
         this.planId = planId;
