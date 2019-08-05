@@ -35,4 +35,13 @@ public class Cellular {
     public void setPackages(ArrayList<Package> packages) {
         this.packages = packages;
     }
+
+    @Override
+    public String toString() {
+        return "Cellular{" +
+                "cellularNumber='" + cellularNumber + '\'' +
+                ", planId=" + planId +
+                ", packages=" + packages +
+                '}';
+    }
 }

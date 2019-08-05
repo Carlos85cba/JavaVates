@@ -24,4 +24,12 @@ public class Package {
     public void setPrice(java.lang.Float price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Package{" +
+                "packageId='" + packageId + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
