@@ -21,11 +21,11 @@ public class Api {
         pac.add(p4);
         pac.add(p5);
         Plan pl1 = new Plan("Plan01",847F);
-        Plan pl1a = new Plan("Plan01",700F);
+
 
         Cellular c = new Cellular("3513936390", pl1,pac);
         cellular.add(c);
-        Cellular c2 = new Cellular("3515557925", pl1a,pac);
+        Cellular c2 = new Cellular("3515557925", pl1,pac);
         cellular.add(c2);
         Cellular c3 = new Cellular("3515555555", pl1,pac);
         cellular.add(c3);
@@ -47,15 +47,19 @@ public class Api {
 
     public ArrayList getCellularInfo(String cel) {
         ArrayList<Cellular> apiMatch = new ArrayList<>();
+        try {
         for (Cellular cel2 : cellular) {
             if (cel2.getCellularNumber().equals(cel)){
-                System.out.println("Coincide");
+                System.out.println("Devuelve Api");
                 apiMatch.add(cel2);}
         }
-    //    try{if (apiMatch.isEmpty());
 
-      //      catch(MyExcepcion ex){
-        //        System.out.println(ex.excErrorPersonalizado());}
+        if (apiMatch.isEmpty()) {
+              throw new MyExcepcion();
+            }
+    }
+            catch(MyExcepcion ex){
+               System.out.println(ex.excErrorPersonalizado());}
         return apiMatch;
     }
 

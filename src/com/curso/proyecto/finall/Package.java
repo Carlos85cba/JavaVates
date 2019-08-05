@@ -9,6 +9,12 @@ public class Package {
         this.price = price;
     }
 
+    public Package(java.lang.String packageId, java.lang.Float price,Float iva) {
+        this.packageId = packageId;
+        this.price = price + price* iva;
+
+    }
+
     public java.lang.String getPackageId() {
         return packageId;
     }

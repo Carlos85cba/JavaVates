@@ -9,6 +9,11 @@ public class Plan {
         this.price = price;
     }
 
+    public Plan(java.lang.String planID, java.lang.Float price,float iva) {
+        this.planID = planID;
+        this.price = price + price *iva;
+    }
+
     public java.lang.String getPlanID() {
         return planID;
     }
