@@ -20,11 +20,21 @@ public class Api {
         pac.add(p3);
         pac.add(p4);
         pac.add(p5);
+        Plan pl1 = new Plan("Plan01",847F);
+        Plan pl1a = new Plan("Plan01",700F);
 
-        Cellular c = new Cellular("3513936390", new Plan("Plan01",847F),pac);
+        Cellular c = new Cellular("3513936390", pl1,pac);
         cellular.add(c);
-        Cellular c2 = new Cellular("3515557925", new Plan("Plan01",700F),pac);
+        Cellular c2 = new Cellular("3515557925", pl1a,pac);
         cellular.add(c2);
+        Cellular c3 = new Cellular("3515555555", pl1,pac);
+        cellular.add(c3);
+        Cellular c4 = new Cellular("3513333333", pl1,pac);
+        cellular.add(c4);
+        Cellular c5 = new Cellular("3514444444", pl1,pac);
+        cellular.add(c5);
+        Cellular c6 = new Cellular("3517777777", pl1,pac);
+        cellular.add(c6);
     }
 
    // public Api(Cellular cel) {
@@ -42,6 +52,10 @@ public class Api {
                 System.out.println("Coincide");
                 apiMatch.add(cel2);}
         }
+    //    try{if (apiMatch.isEmpty());
+
+      //      catch(MyExcepcion ex){
+        //        System.out.println(ex.excErrorPersonalizado());}
         return apiMatch;
     }
 
