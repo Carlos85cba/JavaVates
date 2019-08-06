@@ -47,24 +47,35 @@ public class Main {
 
         //PAQUETES
         int size = capi.getPackages().size();
-        int sizedb = capi.getPackages().size();
-        String packNotFound="";
+        int sizedb = cdb.getPackages().size();
+        String packNotFound = "";
         try {
             for (int i = 0; i < size; i++) {
+                boolean flag = false;
                 for (int j = 0; j < sizedb; j++)
-                    if (capi.getPackages().get(i).getPackageId().equals(cdb.getPackages().get(j).getPackageId()))
+
+                    if (capi.getPackages().get(i).getPackageId().equals(cdb.getPackages().get(j).getPackageId())) {
+                        flag = true;
                         if (capi.getPackages().get(i).getPrice().equals(cdb.getPackages().get(j).getPrice())) {
                             System.out.println("Los precios del paquete " + capi.getPackages().get(i).getPackageId() + " SI Coinciden");
-                            packNotFound= String.valueOf(capi.getPackages().get(i).getPackageId());
+                            packNotFound = String.valueOf(capi.getPackages().get(i).getPackageId());
 
                         } else {
                             System.out.println("Los precios del paquete " + capi.getPackages().get(i).getPackageId() + " NO Coinciden");
-                            packNotFound= String.valueOf(capi.getPackages().get(i).getPackageId());
+                            packNotFound = String.valueOf(capi.getPackages().get(i).getPackageId());
 
                         }
+                    } else {
 
+                        if (flag == false && j == (sizedb-1)) {
+                            System.out.println("No se encontro el paquete " + capi.getPackages().get(i).getPackageId());
+                    }
+
+                }
             }
-        } catch(java.lang.IndexOutOfBoundsException ex){System.out.println("No se encontro el paquete "+ packNotFound);}
+        } catch (java.lang.IndexOutOfBoundsException ex) {
+            System.out.println("No se encontro el paquete " + packNotFound);
+        }
 
 
     }
