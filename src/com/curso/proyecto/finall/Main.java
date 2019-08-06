@@ -62,13 +62,14 @@ public class Main {
 
                         } else {
                             System.out.println("Los precios del paquete " + capi.getPackages().get(i).getPackageId() + " NO Coinciden");
-                            packNotFound = String.valueOf(capi.getPackages().get(i).getPackageId());
+
 
                         }
                     } else {
 
                         if (flag == false && j == (sizedb-1)) {
                             System.out.println("No se encontro el paquete " + capi.getPackages().get(i).getPackageId());
+                            packNotFound = String.valueOf(capi.getPackages().get(i).getPackageId());
                     }
 
                 }
