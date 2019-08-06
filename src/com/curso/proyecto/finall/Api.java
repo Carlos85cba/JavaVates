@@ -14,7 +14,7 @@ public class Api {
     public Api() {
         Package p1 = new Package("Pack01", 60.50F);
         Package p2 = new Package("Pack02", 60.50F);
-        Package p3 = new Package("Pack03", 84.75F);
+        Package p3 = new Package("Pack03", 84.7F);
         Package p4 = new Package("Pack04", 90.75F);
         Package p5 = new Package("Pack05", 72.60F);
 
